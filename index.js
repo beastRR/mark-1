@@ -1,13 +1,14 @@
 var readlineSync = require("readline-sync");
 var userName = readlineSync.question("What's your Name? ");
 console.log("Welcome  "  + userName
- +  " Do you know Rakesh ?");
+ +  " Do you know Rahul ?");
  score=0;
 
  console.log("welcome to the Quiz")
 
  function play(question,answer){
-   var userAnswer =readlineSync.question(question)
+   var userAnswer =readlineSync.question(question);
+    userAnswer = userAnswer.toLowerCase();
    if(userAnswer === answer){
      console.log("You are right")
      score = score+1;
